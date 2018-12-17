@@ -1,0 +1,30 @@
+{
+    "repositories": [
+        {
+            "url": "https://github.com/aicoutos/auth.git",
+            "type": "git"
+        },
+        {
+            "url": "https://github.com/aicoutos/migration.git",
+            "type": "git"
+        },
+        {
+            "url": "https://github.com/catfan/medoo.git",
+            "type": "git"
+        },
+        {
+            "url": "https://github.com/FastFeed/FastFeed.git",
+            "type": "git"
+        },
+        {
+            "url": "https://github.com/vlucas/phpdotenv.git",
+            "type": "git"
+        }
+    ],
+    "require": {
+        "basic/auth": "3.0.*",
+        "basic/migration": "^2.1",
+        "fastfeed/fastfeed": "0.4.0",
+        "vlucas/phpdotenv": "2.5.1"
+    }
+}

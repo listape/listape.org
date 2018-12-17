@@ -1,0 +1,38 @@
+label{
+    font-weight: bold;
+}
+.error{
+    color:red;
+    font-style: italic;
+    font-weight:normal;
+}
+.hand{
+    cursor: pointer;
+}
+.table {
+    width:100%;
+    white-space: nowrap;
+}
+.table .main{
+    width:100%;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+    body {
+        padding-top: 50px;
+    }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { ... }
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+}
