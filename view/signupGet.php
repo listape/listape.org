@@ -9,7 +9,7 @@ $title='Criar conta';
     <?php view('inc/header'); ?>
 </head>
 <body>
-    <?php view('inc/nav'); ?>
+    <?php view('inc/nav',$data); ?>
     <div class="container">
         <div class="offset4 span3">
             <h1><?php print $title; ?></h1>
