@@ -36,7 +36,8 @@
                         print $user['type'];
                         print '</td>';
                         print '<td>';
-                        $link='javascript:apagarUsuário('.$user['id'].');';
+                        $params='\''.$user['name'].'\','.$user['id'];
+                        $link='javascript:apagarUsuário('.$params.');';
                         print '<a href="'.$link.'" class="btn btn-mini">';
                         print 'Apagar';
                         print '</a>';
@@ -53,5 +54,18 @@
         </div>
     </div> <!--container-->
     <?php view('inc/footer'); ?>
+    <script type="text/javascript">
+    function apagarUsuário(name,id){
+        if(confirm('Apagar o usuário "'+name+'"?')){
+            $.getJSON( "/users/"+id+"/apagar", function( data ) {
+                if(data){
+                    redirect('/users');
+                }else{
+                    alert('Erro ao apagar o usuário "'+name+'"');
+                }
+            });
+        }
+    }
+    </script>
 </body>
 </html>
