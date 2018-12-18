@@ -1,0 +1,26 @@
+<?php
+$data=[
+    'name'=>$_POST['name'],
+    'email'=>$_POST['email'],
+    'password'=>$_POST['password'],
+    'type'=>'user'
+];
+if(strlen($_POST['name'])<=32 && strlen($_POST['email'])<=32){
+    $user=signup($data);
+}else{
+    $user['error']=true;
+}
+if(isset($user['error'])){
+    $data=[
+        'error'=>$user['error'],
+        'title'=>'Entrar'
+    ];
+    view('signupGet',$data);
+}else{
+    $user=signin();
+    if($user['type']=='admin'){
+        redirect('/users');
+    }else{
+        redirect('/user/'.$user['id']);
+    }
+}

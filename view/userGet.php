@@ -26,7 +26,11 @@
                     }
                     print '</ul>';
                 }else{
-                    print 'Nenhuma lista enviada';
+                    ?>
+                    <p>
+                        Nenhuma lista enviada. <a href="/list/_/create">Clique aqui</a> para enviar uma lista.
+                    </p>
+                    <?php
                 }
                 ?>
             </div>

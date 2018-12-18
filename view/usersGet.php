@@ -2,7 +2,7 @@
 <html lang="pt" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <title><?php e($user['name']); ?></title>
+    <title>Usuários</title>
     <?php view('inc/header'); ?>
 </head>
 <body>
@@ -11,9 +11,17 @@
         <div class="row-fluid">
             <div class="offset3 span6">
                 <h1>
-                    <small>Listas</small>
-                    <br>
-                    <?php e($user['name']); ?>
+                    <?php
+                    $count=count($users);
+                    print $count;
+                    print '<small>';
+                    if($count>1){
+                        print ' usuários';
+                    }else{
+                        print ' usuário';
+                    }
+                    print '</small>';
+                    ?>
                 </h1>
                 <?php
                 if(@count($users)>0){
@@ -22,12 +30,12 @@
                     print '<tr>';
                     print '<th>Nome</th>';
                     print '<th>Tipo</th>';
-                    print '<th>Apagar</th>';
+                    print '<th>Opções</th>';
                     print '</tr>';
                     print '</thead>';
                     print '<tbody>';
-                    print '<tr>';
                     foreach ($users as $user) {
+                        print '<tr>';
                         print '<td>';
                         $link='/user/'.$user['id'];
                         print '<a href="'.$link.'">'.$user['name'].'</a>';
@@ -42,8 +50,8 @@
                         print 'Apagar';
                         print '</a>';
                         print '</td>';
+                        print '</tr>';
                     }
-                    print '</tr>';
                     print '</tbody>';
                     print '</table>';
                 }else{
@@ -57,7 +65,7 @@
     <script type="text/javascript">
     function apagarUsuário(name,id){
         if(confirm('Apagar o usuário "'+name+'"?')){
-            $.getJSON( "/users/"+id+"/apagar", function( data ) {
+            $.getJSON( "/users/"+id+"/delete", function( data ) {
                 if(data){
                     redirect('/users');
                 }else{
