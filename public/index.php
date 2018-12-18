@@ -23,10 +23,13 @@ $method=ucfirst(strtolower(getMethod()));
 $controller=$controller.$method;
 $filenameController=ROOT.'controller/'.$controller.'.php';
 $filenameView=ROOT.'view/'.$controller.'.php';
+
+//variaveis globais
+$data['user']=isAuth();
+$data['db']=db();
 if(file_exists($filenameController)){
-    controller($controller);
+    controller($controller,$data);
 }elseif(file_exists($filenameView)){
-    $data['user']=isAuth();
     view($controller,$data);
 }else{
     view('404');
