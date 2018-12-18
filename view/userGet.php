@@ -30,7 +30,6 @@
                 }
                 ?>
             </div>
-
         </div>
     </div> <!--container-->
     <?php view('inc/footer'); ?>
