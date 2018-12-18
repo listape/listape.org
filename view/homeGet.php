@@ -10,6 +10,7 @@
     <div class="container text-center">
         <div class="row-fluid">
             <div class="offset3 span6">
+                <br>
                 <a href="/" title="ListApe">
                     <img src="/img/mushape.svg" alt="" width="300" alt="ListApe">
                 </a>
