@@ -1,23 +1,32 @@
 #!/bin/bash
 clear
 
+criar_super_usuario() {
+    clear
+    migrar_tabelas
+    echo "criando usuário..."
+    php bin/superUser.php
+}
+
 migrar_tabelas(){
     echo "migrando as tabelas..."
     php migrate.php
 }
 
 if [ -z "$1" ]
-	then
-        echo "Digite a opção:"
-        echo "0) migrar tabelas"
-        printf "Opção número "
-		read opt
-	else
-		opt=$1
+then
+    echo "Digite a opção:"
+    echo "1) migrar tabelas"
+    echo "2) criar super usuário"
+    printf "Opção número "
+    read opt
+else
+    opt=$1
 fi
 
 case $opt
-in
-    0) clear && migrar_tabelas ;;
+    in
+    1) clear && migrar_tabelas ;;
+    2) criar_super_usuario ;;
     *) echo "opção inválida" ;;
 esac

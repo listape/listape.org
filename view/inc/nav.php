@@ -1,6 +1,7 @@
 <?php
-if($user){
-    print 'nav online';
+$data['user']=isAuth();
+if($data['user']){
+    view("inc/navOnline",$data);
 }else{
     view("inc/navOffline");
 }
