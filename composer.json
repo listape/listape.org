@@ -9,6 +9,10 @@
             "type": "git"
         },
         {
+            "url": "https://github.com/aicoutodasilva/upload",
+            "type": "git"
+        },
+        {
             "url": "https://github.com/catfan/medoo.git",
             "type": "git"
         },
@@ -24,6 +28,7 @@
     "require": {
         "basic/auth": "3.0.*",
         "basic/migration": "^2.1",
+        "basic/upload": "2.0.*",
         "fastfeed/fastfeed": "0.4.0",
         "vlucas/phpdotenv": "2.5.1"
     }

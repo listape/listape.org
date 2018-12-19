@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "424e81c58fc168bc015b5863955bd920",
-    "content-hash": "2cba3313671a15de8be597362bc2b8ef",
+    "hash": "afcc28fcf2dceb1b82852dd9bf9db47b",
+    "content-hash": "2ccfa1e5eb3c8df10311f8450d08edaa",
     "packages": [
         {
             "name": "basic/auth",
@@ -52,6 +52,26 @@
             ],
             "description": "Sistema básico de migration",
             "time": "2018-10-16 00:42:58"
+        },
+        {
+            "name": "basic/upload",
+            "version": "2.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aicoutodasilva/upload",
+                "reference": "eb8d01f1d859f43c1f6985264cc88953a9f4d686"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Basic\\": "/src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Sistema básico de upload",
+            "time": "2018-03-03 18:25:12"
         },
         {
             "name": "catfan/medoo",
