@@ -14,10 +14,18 @@
                 <a href="/" title="ListApe">
                     <img src="/img/mushape.svg" alt="" width="300" alt="ListApe">
                 </a>
-                <br><br>
+                <ul class="nav nav-tabs">
+                    <li>
+                        <a href="/">Pesquisar</a>
+                    </li>
+                    <li><a href="/list/_/create">Enviar vista</a></li>
+                </ul>
                 <form class="" action="/" method="get">
-                    <input type="text" class="input-block-level" name="s" value="" id="s">
-                    <button type="submit+class=btn">Pesquisar</button>
+                    <div class="control-group">
+                        <label for="s">Digite o nome de uma lista e clique em buscar</label>
+                        <input type="text" class="input-block-level" name="s" value="" id="s">
+                    </div>
+                    <button type="submit" class="btn btn-large">Pesquisar</button>
                 </form>
             </div>
         </div>

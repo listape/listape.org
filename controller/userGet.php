@@ -1,13 +1,12 @@
 <?php
-$listId=segment(2);
+$id=segment(2);
 $acao=segment(3);
 switch ($acao) {
-    case 'create':
-    redirecionaSeNaoEstaLogado($user);
-    view("listCreateGet",$data);
+    case false:
+    view('userGet',$data);
     break;
     default:
-    view('listGet',$data);
+    view(404);
     break;
 }
 function redirecionaSeNaoEstaLogado($user){
