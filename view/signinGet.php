@@ -20,6 +20,8 @@ $title='Entrar';
                 <input type="password" id="password" name="password" class="input-block-level" minlength="8" required>
                 <button type="submit" class="btn-large btn-block btn-primary"><?php print $title; ?></button>
             </form>
+            <h4>Ainda não tem uma conta?</h4>
+            <p><a href="/signup">Clique aqui</a> e cadastre-se gratuitamente</p>
             <script type="text/javascript">
             $(function() {
                 var validator = $( "#frmSignin" ).validate();

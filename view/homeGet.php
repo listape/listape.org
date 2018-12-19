@@ -18,7 +18,7 @@
                     <li>
                         <a href="/">Pesquisar</a>
                     </li>
-                    <li><a href="/list/_/create">Enviar vista</a></li>
+                    <li><a href="/list/_/create">Enviar lista</a></li>
                 </ul>
                 <form class="" action="/" method="get">
                     <div class="control-group">

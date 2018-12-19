@@ -1,5 +1,5 @@
 <?php
-$listId=segment(2);
+$uid=segment(2);
 $acao=segment(3);
 switch ($acao) {
     case 'create':
@@ -7,8 +7,20 @@ switch ($acao) {
     view("listCreateGet",$data);
     break;
     default:
-    view('listGet',$data);
+    $data['list']=getListByUid($uid);
+    if($data['list']){
+        view('listGet',$data);
+    }else{
+        view(404);
+    }
     break;
+}
+function getListByUid($uid){
+    return [
+        'name'=>'Nome da lista',
+        'description'=>'Descrição da lista',
+        'uid'=>'haha'
+    ];
 }
 function redirecionaSeNaoEstaLogado($user){
     if(!$user){

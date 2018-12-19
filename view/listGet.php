@@ -17,8 +17,8 @@
                     <?php e($list['description']); ?>
                 </p>
                 <?php
-                $link='/list/'.$list['uuid'].'/download';
-                print '<a href="'.$link.'" class="btn">';
+                $link='/list/'.$list['uid'].'/download';
+                print '<a href="'.$link.'" class="btn btn-large input-block-level">';
                 print 'Baixar lista';
                 print '</a>';
                 ?>
