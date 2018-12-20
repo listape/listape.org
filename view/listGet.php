@@ -13,9 +13,6 @@
                 <h1>
                     <?php e($list['name']); ?>
                 </h1>
-                <p>
-                    <?php e($list['description']); ?>
-                </p>
                 <?php
                 $link='/list/'.$list['uid'].'/download';
                 print '<a href="'.$link.'" class="btn btn-large input-block-level">';

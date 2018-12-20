@@ -4,7 +4,7 @@ if(isset($user['type']) && $user['type']=='admin'){
         $acao=segment(3);
         if($acao=='delete'){
             $where=[
-                'id'=>segment(2)
+                'uuid'=>segment(2)
             ];
             $db->delete("users",$where);
             print json(true);

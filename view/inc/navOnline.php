@@ -10,15 +10,7 @@
             <div class="nav-collapse collapse">
                 <ul class="nav pull-right">
                     <?php view('inc/menu',$data); ?>
-                    <li class="dropdown">
-                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"><?php e($user['name']) ?> <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/user/<?php e($user['id']); ?>">Meu perfil</a></li>
-                            <li><a href="/logout">Sair</a></li>
-                        </ul>
-                    </li>
                 </ul>
-
             </div><!--/.nav-collapse -->
         </div>
     </div>

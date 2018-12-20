@@ -28,23 +28,26 @@
                     return this.optional(element) || (element.files[0].size <= param)
                 }, 'File size must be less than {0} bytes');
 
-                jQuery(function ($) {
-                    $('#frmList').validate({
-                        rules: {
-                            file: {
-                                required: true,
-                                extension: "csv",
-                                filesize: 1000000,//1000000 = 1 mb
-                            }
-                        },
-                        messages: {
-                            file: {
-                                extension: "Envie um arquivo {0}",
-                                filesize: 'Envie um arquivo com o no máximo 1 megabyte'
-                            }
+                var validator=$('#frmList').validate({
+                    rules: {
+                        file: {
+                            required: true,
+                            extension: "csv",
+                            filesize: 1000000,//1000000 = 1 mb
                         }
-                    });
+                    },
+                    messages: {
+                        file: {
+                            extension: "Envie um arquivo {0}",
+                            filesize: 'Envie um arquivo com o no máximo 1 megabyte'
+                        }
+                    }
                 });
+                <?php
+                if(isset($error)){
+                    print 'validator.form();';
+                }
+                ?>
                 </script>
             </div>
         </div>
