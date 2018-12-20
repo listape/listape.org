@@ -11,8 +11,6 @@
         <div class="row-fluid">
             <div class="offset3 span6">
                 <h1>
-                    <small>Listas de</small>
-                    <br>
                     <?php e($user['name']); ?>
                 </h1>
                 <?php

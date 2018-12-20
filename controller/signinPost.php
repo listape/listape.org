@@ -10,6 +10,6 @@ if(isset($user['error'])){
     if($user['type']=='admin'){
         redirect('/users');
     }else{
-        redirect('/user/'.$user['id']);
+        redirect('/list/_/create');
     }
 }

@@ -3,4 +3,7 @@
     <note priority="medium" time="1544551595" done="1545157107">
         adicionar switch automatico de controller de acordo com o método (GET ou POST)
     </note>
+    <note priority="medium" time="1545304678">
+        helper me.php (funções isMe())
+    </note>
 </todo>

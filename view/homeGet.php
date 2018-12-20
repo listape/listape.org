@@ -25,7 +25,9 @@
                         <label for="s">Digite o nome de uma lista e clique em buscar</label>
                         <input type="text" class="input-block-level" name="s" value="" id="s">
                     </div>
-                    <button type="submit" class="btn btn-large">Pesquisar</button>
+                    <button type="submit" class="btn btn-large">
+                        Pesquisar
+                    </button>
                 </form>
             </div>
         </div>

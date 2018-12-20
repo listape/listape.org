@@ -9,6 +9,9 @@
             <a class="brand" href="/">ListApe</a>
             <div class="nav-collapse collapse">
                 <ul class="nav pull-right">
+                    <li><a href="/">Pesquisar</a></li>
+                    <li><a href="/list/_/create">Enviar lista</a></li>
+                    <li><a href="/user/<?php e($user['id']);?>">Minhas listas</a></li>
                     <li class="dropdown">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"><?php e($user['name']) ?> <b class="caret"></b></a>
                         <ul class="dropdown-menu">
