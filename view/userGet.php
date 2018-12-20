@@ -19,14 +19,23 @@
                 </h1>
                 <?php
                 if(@count($lists)>0){
-                    print '<ul class="nav nav-tabs nav-stacked">';
+                    print '<table class="table table-striped">';
                     foreach ($lists as $list) {
-                        print '<li>';
+                        print '<tr>';
+                        print '<td>';
                         $link='/list/'.$list['uid'];
                         print '<a href="'.$link.'">'.$list['name'].'</a>';
-                        print '</li>';
+                        print '</td>';
+                        print '<td>';
+                        $params='\''.$list['name'].'\',\''.$list['uid'].'\'';
+                        $link='javascript:apagarLista('.$params.');';
+                        print '<a href="'.$link.'" class="btn btn-mini">';
+                        print 'Apagar';
+                        print '</a>';
+                        print '</td>';
+                        print '</tr>';
                     }
-                    print '</ul>';
+                    print '</table>';
                 }else{
                     ?>
                     <p>
@@ -35,6 +44,19 @@
                     <?php
                 }
                 ?>
+                <script type="text/javascript">
+                function apagarLista(name,uid){
+                    if(confirm('Apagar a lista "'+name+'"?')){
+                        $.getJSON( "/list/"+uid+"/delete", function( data ) {
+                            if(data){
+                                redirect('/user/<?php e($user['uuid']);?>');
+                            }else{
+                                alert('Erro ao apagar a lista "'+name+'"');
+                            }
+                        });
+                    }
+                }
+                </script>
             </div>
         </div>
     </div> <!--container-->
