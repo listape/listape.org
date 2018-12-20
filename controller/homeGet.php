@@ -1,6 +1,6 @@
 <?php
 if (isset($_GET['q'])) {
-    view("searchGet",$data);
+    controller('searchGet',$data);
 }else{
     view("homeGet",$data);
 }

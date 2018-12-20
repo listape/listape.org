@@ -17,14 +17,7 @@
                 <a href="/" title="ListApe">
                     <img src="/img/mushape.svg" alt="" width="300" alt="ListApe">
                 </a>
-                <form class="" action="/" method="get">
-                    <div class="control-group"><br>
-                        <input type="text" class="input-block-level" name="q" value="" id="q">
-                    </div>
-                    <button type="submit" class="btn btn-large">
-                        Pesquisar
-                    </button>
-                </form>
+                <?php view('inc/formSearch',$data); ?>
             </div>
         </div>
     </div> <!--container-->
