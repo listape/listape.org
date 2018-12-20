@@ -6,6 +6,9 @@ switch ($acao) {
     redirecionaSeNaoEstaLogado($user);
     view("listCreateGet",$data);
     break;
+    case 'download':
+    downloadList($uid,$data);
+    break;
     default:
     $data['list']=getListByUid($uid);
     if($data['list']){
@@ -15,11 +18,20 @@ switch ($acao) {
     }
     break;
 }
+function downloadList($uid,$data){
+    $file = ROOT.'csv/'.$uid;
+    $name='Capitais brasileiras.csv';
+    //$name=slug($name);
+    header('Content-Description: File Transfer');
+    header('Content-Type: application/octet-stream');
+    header('Content-Disposition: attachment; filename="'.$name.'"');
+    header('Content-Transfer-Encoding: binary');
+    readfile($file);
+}
 function getListByUid($uid){
     return [
-        'name'=>'Nome da lista',
-        'description'=>'Descrição da lista',
-        'uid'=>'haha'
+        'uid'=>'haha',
+        'name'=>'Capitais brasileiras'
     ];
 }
 function redirecionaSeNaoEstaLogado($user){

@@ -18,11 +18,11 @@
                     Minhas listas
                 </h1>
                 <?php
-                if(@count($listas)>0){
+                if(@count($lists)>0){
                     print '<ul class="nav nav-tabs nav-stacked">';
-                    foreach ($listas as $list) {
+                    foreach ($lists as $list) {
                         print '<li>';
-                        $link='/list/'.$list['uuid'];
+                        $link='/list/'.$list['uid'];
                         print '<a href="'.$link.'">'.$list['name'].'</a>';
                         print '</li>';
                     }
