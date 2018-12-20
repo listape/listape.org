@@ -10,8 +10,12 @@
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="offset3 span6">
+                <br>
+                <ul class="nav nav-tabs">
+                    <?php view('inc/menu',$data); ?>
+                </ul>
                 <h1>
-                    <?php e($user['name']); ?>
+                    Minhas listas
                 </h1>
                 <?php
                 if(@count($listas)>0){

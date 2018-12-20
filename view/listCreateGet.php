@@ -11,14 +11,8 @@
         <div class="row-fluid">
             <div class="offset3 span6 text-center">
                 <br>
-                <a href="/" title="ListApe">
-                    <img src="/img/mushape.svg" alt="" width="300" alt="ListApe">
-                </a>
                 <ul class="nav nav-tabs">
-                    <li>
-                        <a href="/">Pesquisar</a>
-                    </li>
-                    <li><a href="/list/_/create">Enviar lista</a></li>
+                    <?php view('inc/menu',$data); ?>
                 </ul>
                 <form class="form-vertical" id="frmList" action="/list/_/create" method="post" enctype="multipart/form-data" method="post">
                     <div class="control-group">
