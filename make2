@@ -8,6 +8,13 @@ criar_super_usuario() {
     php bin/superUser.php
 }
 
+instalar() {
+    echo 'instalando...'
+    migrar_tabelas
+    criar_super_usuario
+    sudo chmod 777 -R csv
+}
+
 migrar_tabelas(){
     echo "migrando as tabelas..."
     php migrate.php
@@ -16,6 +23,7 @@ migrar_tabelas(){
 if [ -z "$1" ]
 then
     echo "Digite a opção:"
+    echo "0) instalar"
     echo "1) migrar tabelas"
     echo "2) criar super usuário"
     printf "Opção número "
@@ -26,6 +34,7 @@ fi
 
 case $opt
     in
+    0) instalar ;;
     1) clear && migrar_tabelas ;;
     2) criar_super_usuario ;;
     *) echo "opção inválida" ;;

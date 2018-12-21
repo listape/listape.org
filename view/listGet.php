@@ -14,10 +14,17 @@
                     <?php e($list['name']); ?>
                 </h1>
                 <?php
+                if(isset($user['uuid']) && $list['uuid']==$user['uuid']){
+                    $link='/list/'.$list['uid'].'/update';
+                    print '<a href="'.$link.'" class="btn btn-large input-block-level">';
+                    print 'Atualizar lista';
+                    print '</a><br>';
+                }
                 $link='/list/'.$list['uid'].'/download';
                 print '<a href="'.$link.'" class="btn btn-large input-block-level">';
                 print 'Baixar lista';
                 print '</a>';
+
                 ?>
             </div>
         </div>

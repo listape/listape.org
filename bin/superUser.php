@@ -14,7 +14,7 @@ $where=[
 ];
 $usuarioExiste=$db->get("users","*",$where);
 if($usuarioExiste){
-    print 'ERRO: O usuário '.$user['name'].' já está cadastrado'.PHP_EOL;
+    print 'O super usuário '.$user['name'].' já está cadastrado'.PHP_EOL;
 }else{
     $result=$Auth->signup($user);
     if($result){

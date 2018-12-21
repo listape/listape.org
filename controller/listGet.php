@@ -7,9 +7,21 @@ switch ($acao) {
     redirecionaSeNaoEstaLogado($user);
     view("listCreateGet",$data);
     break;
+
     case 'download':
     downloadList($uid,$data);
     break;
+
+    case 'update':
+    $list=getListByUid($uid);
+    $data['list']=$list;
+    if($list && $list['uuid']==$user['uuid']){
+        view('listUpdateGet',$data);
+    }else{
+        view(404);
+    }
+    break;
+
     default:
     $data['list']=getListByUid($uid);
     if($data['list']){
