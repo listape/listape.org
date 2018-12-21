@@ -11,7 +11,7 @@ if(isset($file['errors'])){
     ocorreuAlgumErro($data);
 }else{
     if($file['size']>=3 && $file['size']<=1000000){
-        //1. verifica se o csv é valido
+        //1. verifica se o csv é valido (tem que ter pelo menos 1 valor)
         //2. salva no banco de dados
         $uid=getListUid();
         $data=[
