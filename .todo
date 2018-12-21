@@ -3,7 +3,13 @@
     <note priority="medium" time="1544551595" done="1545157107">
         adicionar switch automatico de controller de acordo com o método (GET ou POST)
     </note>
-    <note priority="medium" time="1545304678">
+    <note priority="medium" time="1545304678" done="1545421311">
         helper me.php (funções isMe())
+    </note>
+    <note priority="medium" time="1545421334">
+        adicionar o created_at após a tabela para o cloudflare conseguir cachear
+    </note>
+    <note priority="medium" time="1545421353">
+        adicionar o created_at no header das tabelas para o cloudflare cachear
     </note>
 </todo>
