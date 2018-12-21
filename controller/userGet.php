@@ -1,11 +1,13 @@
 <?php
 $uuid=segment(2);
 $acao=segment(3);
-model('list');
-model('user');
+model([
+    'list',
+    'user'
+]);
 switch ($acao) {
     case false:
-    $data['lists']=getListByUuid($uuid);
+    $data['lists']=fetchAllListsByUuid($uuid);
     view('userGet',$data);
     break;
     default:

@@ -1,6 +1,7 @@
 <?php
 $uid=segment(2);
 $acao=segment(3);
+model('list');
 switch ($acao) {
     case 'create':
     redirecionaSeNaoEstaLogado($user);
@@ -18,22 +19,7 @@ switch ($acao) {
     }
     break;
 }
-function downloadList($uid,$data){
-    $file = ROOT.'csv/'.$uid;
-    $name='Capitais brasileiras.csv';
-    //$name=slug($name);
-    header('Content-Description: File Transfer');
-    header('Content-Type: application/octet-stream');
-    header('Content-Disposition: attachment; filename="'.$name.'"');
-    header('Content-Transfer-Encoding: binary');
-    readfile($file);
-}
-function getListByUid($uid){
-    return [
-        'uid'=>'haha',
-        'name'=>'Capitais brasileiras'
-    ];
-}
+
 function redirecionaSeNaoEstaLogado($user){
     if(!$user){
         redirect("/signin");
