@@ -32,16 +32,14 @@ if(empty($q)){
                 </div>
                 <?php
                 if(is_array($lists) && @count($lists)>0){
-                    print '<table class="table table-striped">';
+                    print '<ul class="nav nav-tabs nav-stacked">';
                     foreach ($lists as $list) {
-                        print '<tr>';
-                        print '<td>';
+                        print '<li>';
                         $link='/list/'.$list['uid'];
                         print '<a href="'.$link.'">'.$list['name'].'</a>';
-                        print '</td>';
-                        print '</tr>';
+                        print '</li>';
                     }
-                    print '</table>';
+                    print '</ul>';
                 }else{
                     ?>
                     <p class="text-center">
