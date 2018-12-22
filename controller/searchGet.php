@@ -1,4 +1,12 @@
 <?php
-$data['q']=$_GET['q'];
+model('list');
+$q=$_GET['q'];
+$q=trim($q);
+$data['q']=$q;
+if(empty($q)){
+    $data['lists']=false;
+}else{
+    $data['lists']=searchListByName($data['q'],$db);
+}
 view("searchGet",$data);
 ?>

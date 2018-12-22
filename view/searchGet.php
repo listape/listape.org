@@ -2,7 +2,17 @@
 <html lang="pt" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <title><?php e($user['name']); ?></title>
+<?php
+if(empty($q)){
+    ?>
+    <title>Mushape</title>
+    <?php
+}else{
+    ?>
+    <title><?php e($q); ?> - Mushape</title>
+    <?php
+}
+ ?>
     <?php view('inc/header'); ?>
 </head>
 <body>
@@ -21,7 +31,7 @@
                     <?php view('inc/formSearch',$data); ?>
                 </div>
                 <?php
-                if(@count($lists)>0){
+                if(is_array($lists) && @count($lists)>0){
                     print '<table class="table table-striped">';
                     foreach ($lists as $list) {
                         print '<tr>';

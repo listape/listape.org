@@ -63,4 +63,11 @@ function listUpdate($uid,$name,$uuid){
         view('listUpdateGet',$data);
     }
 }
+function searchListByName($name,$db){
+    $name=printable($name);
+    $where=[
+        'name[~]'=>$name
+    ];
+    return $db->select('lists','*',$where);
+}
 ?>
