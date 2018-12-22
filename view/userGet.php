@@ -2,7 +2,15 @@
 <html lang="pt" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <title><?php e($user['name']); ?></title>
+    <title>
+        <?php
+        if(isset($profile) && $user && $user['uuid']==$profile['uuid']){
+            print 'Minhas listas';
+        }else{
+            print 'Listas de '.$profile['name'];
+        }
+        ?>
+    </title>
     <?php view('inc/header'); ?>
 </head>
 <body>
@@ -15,7 +23,12 @@
                     <?php view('inc/menu',$data); ?>
                 </ul>
                 <h1>
-                    Minhas listas
+                    <?php
+                    if(isset($profile) && $user && $user['uuid']==$profile['uuid']){
+                        print 'Minhas listas';
+                    }else{
+                        print 'Listas de '.$profile['name'];
+                    }?>
                 </h1>
                 <?php
                 if(@count($lists)>0){
@@ -26,13 +39,15 @@
                         $link='/list/'.$list['uid'];
                         print '<a href="'.$link.'">'.$list['name'].'</a>';
                         print '</td>';
-                        print '<td>';
                         $params='\''.$list['name'].'\',\''.$list['uid'].'\'';
                         $link='javascript:apagarLista('.$params.');';
-                        print '<a href="'.$link.'" class="btn btn-mini">';
-                        print 'Apagar';
-                        print '</a>';
-                        print '</td>';
+                        if(isset($profile) && $user && $user['uuid']==$profile['uuid']){
+                            print '<td>';
+                            print '<a href="'.$link.'" class="btn btn-mini">';
+                            print 'Apagar';
+                            print '</a>';
+                            print '</td>';
+                        }
                         print '</tr>';
                     }
                     print '</table>';

@@ -9,17 +9,11 @@ function downloadList($uid,$data){
     header('Content-Transfer-Encoding: binary');
     readfile($file);
 }
-function fetchAllListsByUuid($uuid){
-    return [
-        [
-            'uid'=>'haha',
-            'name'=>'Capitais brasileiras'
-        ],
-        [
-            'uid'=>'haha',
-            'name'=>'Capitais brasileiras'
-        ]
+function fetchAllListsByUuid($uuid,$db){
+    $where=[
+        'uuid'=>$uuid
     ];
+    return $db->select('lists','*',$where);
 }
 function getListByUid($uid){
     $where=[
@@ -39,6 +33,7 @@ function getListUid(){
         return $uid;
     }
 }
+
 function listUpdate($uid,$name,$uuid){
     $name=printable($name);
     if(strlen($name)>=3){

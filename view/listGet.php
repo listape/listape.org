@@ -10,9 +10,22 @@
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="offset3 span6">
+                <br>
+                <ul class="nav nav-tabs">
+                    <?php view('inc/menu',$data); ?>
+                </ul>
                 <h1>
                     <?php e($list['name']); ?>
                 </h1>
+                <p>
+                    Lista enviada por
+                    <?php
+                    $link='/user/'.$list['uuid'];
+                    print '<a href="'.$link.'">';
+                    e($profile['name']);
+                    print '</a>';
+                    ?>
+                </p>
                 <?php
                 if(isset($user['uuid']) && $list['uuid']==$user['uuid']){
                     $link='/list/'.$list['uid'].'/update';

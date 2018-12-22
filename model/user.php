@@ -1,4 +1,10 @@
 <?php
+function getProfileByUuid($uuid,$db){
+    $where=[
+        'uuid'=>$uuid
+    ];
+    return $db->get("users","*",$where);
+}
 function listasDoUsuario($uuid){
     $lists=[
         [

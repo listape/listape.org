@@ -1,7 +1,10 @@
 <?php
 $uid=segment(2);
 $acao=segment(3);
-model('list');
+model([
+    'list',
+    'user'
+]);
 switch ($acao) {
     case 'create':
     redirecionaSeNaoEstaLogado($user);
@@ -25,16 +28,12 @@ switch ($acao) {
     default:
     $data['list']=getListByUid($uid);
     if($data['list']){
+        $uuid=$data['list']['uuid'];
+        $data['profile']=getProfileByUuid($uuid,$db);
         view('listGet',$data);
     }else{
         view(404);
     }
     break;
-}
-
-function redirecionaSeNaoEstaLogado($user){
-    if(!$user){
-        redirect("/signin");
-    }
 }
 ?>

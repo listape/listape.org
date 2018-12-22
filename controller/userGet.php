@@ -5,12 +5,11 @@ model([
     'list',
     'user'
 ]);
-switch ($acao) {
-    case false:
-    $data['lists']=fetchAllListsByUuid($uuid);
+$profile=getProfileByUuid($uuid,$db);
+if($profile){
+    $data['profile']=$profile;
+    $data['lists']=fetchAllListsByUuid($uuid,$db);
     view('userGet',$data);
-    break;
-    default:
-    view(404);
-    break;
+}else{
+    view('404',$data);
 }
