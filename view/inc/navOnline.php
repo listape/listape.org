@@ -8,9 +8,7 @@
             </button>
             <a class="brand" href="/">ListApe</a>
             <div class="nav-collapse collapse">
-                <ul class="nav pull-right">
                     <?php view('inc/menu',$data); ?>
-                </ul>
             </div><!--/.nav-collapse -->
         </div>
     </div>

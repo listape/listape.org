@@ -11,9 +11,6 @@
         <div class="row-fluid">
             <div class="offset3 span6">
                 <br>
-                <ul class="nav nav-tabs">
-                    <?php view('inc/menu',$data); ?>
-                </ul>
                 <a href="/" title="ListApe">
                     <img src="/img/mushape.svg" alt="" width="300" alt="ListApe">
                 </a>

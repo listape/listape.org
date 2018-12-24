@@ -22,9 +22,6 @@ if(empty($q)){
             <div class="offset3 span6">
                 <br>
                 <div class="text-center">
-                    <ul class="nav nav-tabs">
-                        <?php view('inc/menu',$data); ?>
-                    </ul>
                     <div class="text-left">
                         Resultados da busca por <b><?php e($q); ?></b>
                     </div>

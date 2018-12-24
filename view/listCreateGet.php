@@ -11,9 +11,6 @@
         <div class="row-fluid">
             <div class="offset3 span6 text-center">
                 <br>
-                <ul class="nav nav-tabs">
-                    <?php view('inc/menu',$data); ?>
-                </ul>
                 <form class="form-vertical" id="frmList" action="/list/_/create" method="post" enctype="multipart/form-data" method="post">
                     <div class="control-group">
                         <label for="file">Selecione um arquivo no formato csv e clique em enviar</label>

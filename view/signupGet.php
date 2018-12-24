@@ -31,6 +31,10 @@ $title='Criar conta';
                     <?php print $title; ?>
                 </button>
             </form>
+            <div class="text-center">
+                <h4>Já tem uma conta?</h4>
+                <p><a href="/signin">Clique aqui</a> para entrar</p>
+            </div>
             <script type="text/javascript">
             $(function() {
                 var validator = $( "#frmSignup" ).validate();

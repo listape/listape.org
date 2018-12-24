@@ -8,10 +8,7 @@
             </button>
             <a class="brand" href="/">ListApe</a>
             <div class="nav-collapse collapse">
-                <ul class="nav">
-                    <li><a href="/signup">Criar conta</a></li>
-                    <li><a href="/list/_/create">Enviar lista</a></li>
-                </ul>
+<?php view('inc/menu',$data); ?>
                 <form class="navbar-form pull-right" action="/signin" method="post">
                     <input class="span2" type="email" name="email" placeholder="Email">
                     <input class="span2" type="password" name="password" placeholder="Senha">

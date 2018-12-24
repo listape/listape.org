@@ -19,9 +19,6 @@
         <div class="row-fluid">
             <div class="offset3 span6">
                 <br>
-                <ul class="nav nav-tabs">
-                    <?php view('inc/menu',$data); ?>
-                </ul>
                 <h1>
                     <?php
                     if(isset($profile) && $user && $user['uuid']==$profile['uuid']){
