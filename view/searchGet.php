@@ -21,10 +21,8 @@ if(empty($q)){
         <div class="row-fluid">
             <div class="offset3 span6">
                 <br>
+                                  <h1>Resultados</h1>
                 <div class="text-center">
-                    <div class="text-left">
-                        Resultados da busca por <b><?php e($q); ?></b>
-                    </div>
                     <?php view('inc/formSearch',$data); ?>
                 </div>
                 <?php
