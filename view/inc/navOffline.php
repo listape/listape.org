@@ -10,6 +10,7 @@
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="/signup">Criar conta</a></li>
+                    <li><a href="/list/_/create">Enviar lista</a></li>
                 </ul>
                 <form class="navbar-form pull-right" action="/signin" method="post">
                     <input class="span2" type="email" name="email" placeholder="Email">
