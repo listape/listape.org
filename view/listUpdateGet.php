@@ -13,7 +13,7 @@
                 <h1>Atualizar lista</h1>
                 <form id="frmList" class="form-vertical" action="/list/<?php e($list['uid']); ?>/update" method="post">
                     <label for="name">Nome da lista</label>
-                    <input type="text" name="name" id="name" value="<?php e($list['name']); ?>" class="input-block-level" minlength="3" maxlength="32" required>
+                    <input type="text" name="name" id="name" value="<?php e($list['name']); ?>" class="input-block-level" minlength="3" maxlength="<?php print $_ENV['LIST_MAX_NAME_SIZE']; ?>" required>
                     <button type="submit" name="button">Atualizar lista</button>
                 </form>
             </div>
