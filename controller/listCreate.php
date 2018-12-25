@@ -5,7 +5,9 @@ model([
     'list'
 ]);
 $exts=[
-    'csv'
+    'csv',
+    'ods',
+    'xlsx'
 ];
 $file=upload('upload',$exts);
 if(isset($file['errors'])){
@@ -13,15 +15,17 @@ if(isset($file['errors'])){
 }else{
     if($file['size']>=3 && $file['size']<=1000000){
         //1. verifica se o csv é valido (tem que ter pelo menos 1 valor)
-        $array=csvToArray($file['temp']);
+        $array=listToArray($file['temp'],$file['ext']);
         if(!$array){
           $data['error']=true;
           view('listCreateGet',$data);
         }
         //2. salva no banco de dados
         $uid=getListUid();
+        $name=e(pathinfo($file['name'], PATHINFO_FILENAME),false);
+        $name= ucfirst($name);
         $data=[
-            'name'=>'Lista sem nome',
+            'name'=>$name,
             'uid'=>$uid,
             'uuid'=>$user['uuid'],
             'created_at'=>time()

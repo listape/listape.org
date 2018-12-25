@@ -32,7 +32,7 @@
           rules: {
             file: {
               required: true,
-              extension: "csv",
+              extension: "csv,ods,xlsx",
               filesize: 1000000,//1000000 = 1 mb
             }
           },

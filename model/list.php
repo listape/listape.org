@@ -34,6 +34,21 @@ function getListUid(){
     return $uid;
   }
 }
+function listToArray($filename,$ext){
+  $Sheet=new Basic\Sheet();
+  $array=$Sheet->toArray($filename,$ext);
+  reset($array);
+  $key=key($array);
+  if($ext<>'csv' && isset($array[$key])){
+    $array=$array[$key];
+  }
+  $count=$array;
+  if($count>=1){
+    return $array;
+  }else{
+    return false;
+  }
+}
 
 function listUpdate($uid,$name,$uuid){
   $name=printable($name);
