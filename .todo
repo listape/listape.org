@@ -6,6 +6,15 @@
     <note priority="medium" time="1545304678" done="1545421311">
         helper me.php (funções isMe())
     </note>
+    <note priority="medium" time="1545751756" done="1545761695">
+        adicionar o piwik
+    </note>
+    <note priority="high" time="1545761658">
+        mostrar na sidebar as últimas listas enviadas
+    </note>
+    <note priority="high" time="1545761674">
+        contabilizar downloads
+    </note>
     <note priority="medium" time="1545421334">
         adicionar o created_at após a tabela para o cloudflare conseguir cachear
     </note>
@@ -15,22 +24,13 @@
     <note priority="medium" time="1545743141">
         link apontando para a origem dos dados
     </note>
-    <note priority="medium" time="1545751756">
-        adicionar o piwik
-    </note>
     <note priority="medium" time="1545758168">
         usar sha256 como hash dos csv ao invés do uid para economizar espaço
     </note>
     <note priority="medium" time="1545758190">
         adicionar suporte a pastas de listas com thumbnail
     </note>
-    <note priority="medium" time="1545761658">
-        listas das últimas listas enviadas
-    </note>
     <note priority="medium" time="1545761666">
         contabilizar visitas
-    </note>
-    <note priority="medium" time="1545761674">
-        contabilizar downloads
     </note>
 </todo>
