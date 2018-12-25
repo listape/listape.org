@@ -44,7 +44,7 @@
                         print $user['type'];
                         print '</td>';
                         print '<td>';
-                        $params='\''.$user['name'].'\','.$user['uuid'];
+                        $params='\''.$user['name'].'\',\''.$user['uuid'].'\'';
                         $link='javascript:apagarUsuário('.$params.');';
                         print '<a href="'.$link.'" class="btn btn-mini">';
                         print 'Apagar';
