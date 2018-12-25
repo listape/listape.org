@@ -12,7 +12,7 @@
             <div class="offset3 span6">
                 <br>
                 <a href="/" title="ListApe">
-                    <img src="/img/mushape.svg" alt="" width="300" alt="ListApe">
+                    <img src="/img/mushape.svg" alt="" height="206" width="300" alt="ListApe">
                 </a>
                 <?php view('inc/formSearch',$data); ?>
             </div>
