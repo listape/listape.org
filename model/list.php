@@ -1,6 +1,6 @@
 <?php
 function downloadList($uid,$data){
-  $list=getListUid($uid);
+  $list=getListByUid($uid);
   $file = ROOT.'csv/'.$uid;
   $name=$list['name'].'.csv';
   //$name=slug($name);
