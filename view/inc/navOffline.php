@@ -6,7 +6,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="/">ListApe</a>
+            <a class="brand" href="/">ListApe <sup>Pre-alpha</sup></a>
             <div class="nav-collapse collapse">
 <?php view('inc/menu',$data); ?>
                 <form class="navbar-form pull-right" action="/signin" method="post">
