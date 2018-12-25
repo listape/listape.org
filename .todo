@@ -24,4 +24,13 @@
     <note priority="medium" time="1545758190">
         adicionar suporte a pastas de listas com thumbnail
     </note>
+    <note priority="medium" time="1545761658">
+        listas das últimas listas enviadas
+    </note>
+    <note priority="medium" time="1545761666">
+        contabilizar visitas
+    </note>
+    <note priority="medium" time="1545761674">
+        contabilizar downloads
+    </note>
 </todo>
