@@ -37,7 +37,7 @@
                     foreach ($users as $user) {
                         print '<tr>';
                         print '<td>';
-                        $link='/user/'.$user['id'];
+                        $link='/user/'.$user['uuid'];
                         print '<a href="'.$link.'">'.$user['name'].'</a>';
                         print '</td>';
                         print '<td>';
