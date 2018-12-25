@@ -30,7 +30,7 @@
                     print 'Atualizar lista';
                     print '</a><br>';
                 }
-                $link='/list/'.$list['uid'].'/download';
+                $link='/list/'.$list['uid'].'/download/'.$list['name'].'.csv';
                 print '<a href="'.$link.'" class="btn btn-large input-block-level">';
                 print 'Baixar lista';
                 print '</a>';
