@@ -52,6 +52,7 @@ function listToArray($filename,$ext){
 
 function listUpdate($uid,$name,$uuid){
   $name=printable($name);
+  $name=mb_substr($str,0,32);
   if(strlen($name)>=3){
     $where=[
       'AND'=>[
