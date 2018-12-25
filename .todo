@@ -18,4 +18,10 @@
     <note priority="medium" time="1545751756">
         adicionar o piwik
     </note>
+    <note priority="medium" time="1545758168">
+        usar sha256 como hash dos csv ao invés do uid para economizar espaço
+    </note>
+    <note priority="medium" time="1545758190">
+        adicionar suporte a pastas de listas com thumbnail
+    </note>
 </todo>
