@@ -13,6 +13,7 @@ instalar() {
     composer update
     migrar_tabelas
     criar_super_usuario
+    mkdir -p csv
     sudo chmod 777 -R csv
 }
 
