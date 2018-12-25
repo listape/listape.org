@@ -12,25 +12,34 @@
     <note priority="high" time="1545761658">
         mostrar na sidebar as últimas listas enviadas
     </note>
-    <note priority="high" time="1545761674">
-        contabilizar downloads
-    </note>
-    <note priority="medium" time="1545421334">
-        adicionar o created_at após a tabela para o cloudflare conseguir cachear
-    </note>
-    <note priority="medium" time="1545421353">
-        adicionar o created_at no header das tabelas para o cloudflare cachear
-    </note>
-    <note priority="medium" time="1545743141">
-        link apontando para a origem dos dados
+    <note priority="high" time="1545765748">
+        botões para compartilhar o link da lista nas redes sociais
     </note>
     <note priority="medium" time="1545758168">
         usar sha256 como hash dos csv ao invés do uid para economizar espaço
     </note>
-    <note priority="medium" time="1545758190">
+    <note priority="low" time="1545758190">
         adicionar suporte a pastas de listas com thumbnail
     </note>
-    <note priority="medium" time="1545761666">
+    <note priority="low" time="1545761666">
         contabilizar visitas
+    </note>
+    <note priority="low" time="1545761674">
+        contabilizar downloads
+    </note>
+    <note priority="verylow" time="1545421334">
+        adicionar o created_at após a tabela para o cloudflare conseguir cachear
+    </note>
+    <note priority="verylow" time="1545421353">
+        adicionar o created_at no header das tabelas para o cloudflare cachear
+    </note>
+    <note priority="verylow" time="1545743141">
+        link apontando para a origem dos dados
+    </note>
+    <note priority="verylow" time="1545765767">
+        login social (twitter e facebook)
+    </note>
+    <note priority="verylow" time="1545765786">
+        código de incorporação de lista
     </note>
 </todo>
