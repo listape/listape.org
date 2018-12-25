@@ -13,7 +13,7 @@
         <br>
         <form class="form-vertical" id="frmList" action="/list/_/create" method="post" enctype="multipart/form-data" method="post">
           <div class="control-group">
-            <label for="file">Selecione um arquivo no formato csv e clique em enviar</label>
+            <label for="file">Selecione um arquivo no formato csv, ods ou xlsx e clique em enviar</label>
             <input type="file" name="file" class="input-block-level" id="file" required>
           </div>
           <div class="text-center">
