@@ -27,7 +27,7 @@
                 if(isset($user['uuid']) && $list['uuid']==$user['uuid']){
                     $link='/list/'.$list['uid'].'/update';
                     print '<a href="'.$link.'" class="btn btn-large input-block-level">';
-                    print 'Atualizar lista';
+                    print 'Renomear lista';
                     print '</a><br>';
                 }
                 $link='/list/'.$list['uid'].'/download/'.$list['name'].'.csv';
