@@ -10,6 +10,7 @@ criar_super_usuario() {
 
 instalar() {
     echo 'instalando...'
+    composer update
     migrar_tabelas
     criar_super_usuario
     sudo chmod 777 -R csv
