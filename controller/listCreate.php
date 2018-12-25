@@ -24,7 +24,7 @@ if(isset($file['errors'])){
         $uid=getListUid();
         $name=e(pathinfo($file['name'], PATHINFO_FILENAME),false);
         $name= ucfirst($name);
-        $name=mb_substr($str,0,$_ENV['LIST_MAX_NAME_SIZE']);
+        $name=mb_substr($name,0,$_ENV['LIST_MAX_NAME_SIZE']);
         $data=[
             'name'=>$name,
             'uid'=>$uid,
