@@ -12,4 +12,7 @@
     <note priority="medium" time="1545421353">
         adicionar o created_at no header das tabelas para o cloudflare cachear
     </note>
+    <note priority="medium" time="1545743141">
+        link apontando para a origem dos dados
+    </note>
 </todo>
